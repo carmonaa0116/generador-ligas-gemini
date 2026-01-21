@@ -1,0 +1,63 @@
+# Entorno Virtual Python
+venv/
+ENV/
+env/
+.venv
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Gradio
+.gradio/
+gradio_cached_examples/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporal
+*.tmp
+*.temp
+temp/
+
+# Node (si usas npm)
+node_modules/
+package-lock.json
