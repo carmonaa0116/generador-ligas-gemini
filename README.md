@@ -160,12 +160,6 @@ generador-ligas-gemini/
 ├── interfaz_gemini_chat.py          ⭐ Archivo principal
 │   └── App web completa con UI
 │
-├── instalacion_configuracion.py     📖 Guía de instalación
-│   └── Documentación del setup
-│
-├── interfaz_basica_shout.py         📚 Ejemplo básico
-│   └── Para aprender Gradio
-│
 ├── test_env.py                      🧪 Script de prueba
 │   └── Verifica conexión con API
 │
@@ -241,25 +235,6 @@ MODEL_NAME = "gemini-1.5-pro"  # O el modelo que prefieras
 pip install -r requirements.txt
 ```
 
-### "GEMINI_API_KEY not found"
-
-1. Verifica que existe el archivo `.env`
-2. Comprueba que tiene el contenido correcto
-3. Reinicia la aplicación después de crear `.env`
-
-### "Connection refused (ConnectionRefusedError)"
-
-- La API Key es inválida
-- No tienes conexión a Internet
-- El servicio de Gemini está caído
-
-### "Port 7860 is already in use"
-
-```powershell
-# Cierra otra instancia de la app o cambia el puerto
-# En el código: demo.launch(server_port=7861)
-```
-
 ---
 
 ## 📊 Parámetros de Generación
@@ -276,50 +251,7 @@ config=types.GenerateContentConfig(
 
 - **temperature=0.9**: Más creativo (1=máximo, 0=predecible)
 - **max_output_tokens=2048**: Respuestas más largas
-
----
-
-## 🔐 Seguridad
-
-### Proteger tu API Key:
-
-✅ **Lo correcto:**
-- Archivo `.env` en `.gitignore` (NO se sube a GitHub)
-- API Key solo en tu máquina local
-- Usar variables de entorno
-
-❌ **Lo incorrecto:**
-- Pegar API Key en el código
-- Subir `.env` a GitHub
-- Compartir API Key por email
-
----
-
-## 🌐 Desplegar Online
-
-Para compartir la app con otros:
-
-### Opción 1: Gradio Share (Rápido)
-
-```python
-# En el código, ya está activado:
-demo.launch(share=True)
-```
-
-Obtendrás un URL público temporal.
-
-### Opción 2: Hugging Face Spaces (Recomendado)
-
-1. Ve a [Hugging Face Spaces](https://huggingface.co/spaces)
-2. Crea nuevo Space
-3. Carga el código de tu repositorio
-4. Configura `.env` como secreto en Settings
-5. La app está online automáticamente
-
-### Opción 3: Railway, Replit, Heroku
-
-Servicios de alojamiento que permiten ejecutar Python.
-
+- 
 ---
 
 ## 📝 Licencia
@@ -360,18 +292,4 @@ Si tienes problemas:
 
 ---
 
-## 🚀 Próximas Mejoras (Roadmap)
-
-- [ ] Guardar ligas generadas en base de datos
-- [ ] Historial de conversación
-- [ ] Exportar ligas a PDF
-- [ ] Validación de API Key en interfaz
-- [ ] Soporte multi-idioma
-- [ ] Modo oscuro/claro automático
-- [ ] Tests unitarios completos
-
----
-
 **¡Gracias por usar Generador de Ligas!** 🏆
-
-Para más información: [Google Gemini Docs](https://ai.google.dev) | [Gradio Docs](https://www.gradio.app)
